@@ -1,11 +1,11 @@
 package service;
 
-import com.itheima.edu.info.manager.dao.StudentDao;
-import com.itheima.edu.info.manager.domain.Student;
+import dao.StudentDao;
+import domain.Student;
 
 public class StudentService {
     // 创建StudentDao (库管)
-    private StudentDao studentDao = new StudentDao();
+    private final StudentDao studentDao = new StudentDao();
     // 添加学生方法
     public boolean addStudent(Student stu) {
         // 2. 将学生对象, 传递给StudentDao 库管中的addStudent方法
@@ -14,13 +14,12 @@ public class StudentService {
     }
     // 判断学号是否存在方法
     public boolean isExists(String id) {
-        Student[] stus = studentDao.findAllStudent();
+        Student[] students = studentDao.findAllStudent();
         // 假设id在数组中不存在
         boolean exists = false;
         // 遍历数组, 获取每一个学生对象, 准备进行判断
-        for (int i = 0; i < stus.length; i++) {
-            Student student = stus[i];
-            if(student != null && student.getId().equals(id)){
+        for (Student student : students) {
+            if (student != null && student.getId().equals(id)) {
                 exists = true;
                 break;
             }
@@ -35,9 +34,8 @@ public class StudentService {
         // 2. 判断数组中是否有学生信息 (有: 返回地址,  没有: 返回null)
         // 思路: 数组中只要存在一个不是null的元素, 那就代表有学生信息
         boolean flag = false;
-        for (int i = 0; i < allStudent.length; i++) {
-            Student stu = allStudent[i];
-            if(stu != null){
+        for (Student stu : allStudent) {
+            if (stu != null) {
                 flag = true;
                 break;
             }

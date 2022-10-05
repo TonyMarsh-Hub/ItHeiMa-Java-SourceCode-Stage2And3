@@ -1,15 +1,15 @@
 package controller;
 
-import com.itheima.edu.info.manager.domain.Student;
-import com.itheima.edu.info.manager.service.StudentService;
+import domain.Student;
+import service.StudentService;
 
 import java.util.Scanner;
 
 public class StudentController {
     // 业务员对象
-    private StudentService studentService = new StudentService();
+    private final StudentService studentService = new StudentService();
 
-    private Scanner sc = new Scanner(System.in);
+    private final Scanner sc = new Scanner(System.in);
 
     // 开启学生管理系统, 并展示学生管理系统菜单
     public void start() {
@@ -58,9 +58,9 @@ public class StudentController {
     // 删除学生方法
     public void deleteStudentById() {
         // 1. 调用业务员中的获取方法, 得到学生的对象数组
-        Student[] stus = studentService.findAllStudent();
+        Student[] students = studentService.findAllStudent();
         // 2. 判断数组的内存地址, 是否为null
-        if (stus == null) {
+        if (students == null) {
             System.out.println("查无信息, 请添加后重试");
             return;
         }
@@ -74,16 +74,15 @@ public class StudentController {
     // 查看学生方法
     public void findAllStudent() {
         // 1. 调用业务员中的获取方法, 得到学生的对象数组
-        Student[] stus = studentService.findAllStudent();
+        Student[] students = studentService.findAllStudent();
         // 2. 判断数组的内存地址, 是否为null
-        if (stus == null) {
+        if (students == null) {
             System.out.println("查无信息, 请添加后重试");
             return;
         }
         // 3. 遍历数组, 获取学生信息并打印在控制台
         System.out.println("学号\t\t姓名\t年龄\t生日");
-        for (int i = 0; i < stus.length; i++) {
-            Student stu = stus[i];
+        for (Student stu : students) {
             if (stu != null) {
                 System.out.println(stu.getId() + "\t" + stu.getName() + "\t" + stu.getAge() + "\t\t" + stu.getBirthday());
             }

@@ -1,10 +1,10 @@
 package dao;
 
-import com.itheima.edu.info.manager.domain.Teacher;
+import domain.Teacher;
 
 public class TeacherDao {
 
-    private static Teacher[] teachers = new Teacher[5];
+    private static final Teacher[] teachers = new Teacher[5];
 
     public boolean addTeacher(Teacher t) {
         int index = -1;

@@ -1,7 +1,7 @@
 package entry;
 
-import com.itheima.edu.info.manager.controller.StudentController;
-import com.itheima.edu.info.manager.controller.TeacherController;
+import controller.StudentController;
+import controller.TeacherController;
 
 import java.util.Scanner;
 
@@ -14,24 +14,23 @@ public class InfoManagerEntry {
             System.out.println("请输入您的选择: 1.学生管理  2.老师管理  3.退出");
             String choice = sc.next();
             switch (choice) {
-                case "1":
+                case "1" -> {
                     // System.out.println("学生管理");
                     // 开启学生管理系统
                     StudentController studentController = new StudentController();
                     studentController.start();
-                    break;
-                case "2":
+                }
+                case "2" -> {
                     // System.out.println("老师管理");
                     TeacherController teacherController = new TeacherController();
                     teacherController.start();
-                    break;
-                case "3":
+                }
+                case "3" -> {
                     System.out.println("感谢您的使用");
                     // 退出当前正在运行的JVM虚拟机
                     System.exit(0);
-                default:
-                    System.out.println("您的输入有误, 请重新输入");
-                    break;
+                }
+                default -> System.out.println("您的输入有误, 请重新输入");
             }
         }
     }
