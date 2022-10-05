@@ -20,28 +20,16 @@ public class StudentController {
             System.out.println("请输入您的选择: 1.添加学生  2.删除学生  3.修改学生  4.查看学生  5.退出");
             String choice = sc.next();
             switch (choice) {
-                case "1":
-                    // System.out.println("添加");
-                    addStudent();
-                    break;
-                case "2":
-                    // System.out.println("删除");
-                    deleteStudentById();
-                    break;
-                case "3":
-                    // System.out.println("修改");
-                    updateStudent();
-                    break;
-                case "4":
-                    // System.out.println("查询");
-                    findAllStudent();
-                    break;
-                case "5":
+                case "1" -> addStudent();
+                case "2" -> deleteStudentById();
+                case "3" -> updateStudent();
+                case "4" -> findAllStudent();
+                case "5" -> {
                     System.out.println("感谢您使用学生管理系统, 再见!");
                     break studentLoop;
-                default:
-                    System.out.println("您的输入有误, 请重新输入");
-                    break;
+                }
+                default -> System.out.println("您的输入有误, 请重新输入");
+
             }
         }
     }
