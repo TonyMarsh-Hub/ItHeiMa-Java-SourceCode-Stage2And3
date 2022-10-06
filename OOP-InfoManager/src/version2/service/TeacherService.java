@@ -5,7 +5,7 @@ import version2.domain.Teacher;
 
 public class TeacherService {
 
-    private TeacherDao teacherDao = new TeacherDao();
+    private final TeacherDao teacherDao = new TeacherDao();
 
     public boolean addTeacher(Teacher t) {
         return teacherDao.addTeacher(t);
@@ -18,9 +18,8 @@ public class TeacherService {
         boolean exists = false;
 
         // 2. 遍历数组, 取出每一个元素, 进行判断
-        for (int i = 0; i < teachers.length; i++) {
-            Teacher teacher = teachers[i];
-            if(teacher != null && teacher.getId().equals(id)){
+        for (Teacher teacher : teachers) {
+            if (teacher != null && teacher.getId().equals(id)) {
                 exists = true;
                 break;
             }
@@ -34,9 +33,8 @@ public class TeacherService {
 
         boolean flag = false;
 
-        for (int i = 0; i < allTeacher.length; i++) {
-            Teacher t = allTeacher[i];
-            if(t != null){
+        for (Teacher t : allTeacher) {
+            if (t != null) {
                 flag = true;
                 break;
             }

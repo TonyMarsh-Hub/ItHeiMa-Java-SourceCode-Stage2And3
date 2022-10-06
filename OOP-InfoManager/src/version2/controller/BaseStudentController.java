@@ -7,9 +7,9 @@ import java.util.Scanner;
 
 public abstract class BaseStudentController {
     // 业务员对象
-    private StudentService studentService = new StudentService();
+    private final StudentService studentService = new StudentService();
 
-    private Scanner sc = new Scanner(System.in);
+    private final Scanner sc = new Scanner(System.in);
 
     // 开启学生管理系统, 并展示学生管理系统菜单
     public final void start() {
@@ -67,16 +67,15 @@ public abstract class BaseStudentController {
     // 查看学生方法
     public final void findAllStudent() {
         // 1. 调用业务员中的获取方法, 得到学生的对象数组
-        Student[] stus = studentService.findAllStudent();
+        Student[] allStudent = studentService.findAllStudent();
         // 2. 判断数组的内存地址, 是否为null
-        if (stus == null) {
+        if (allStudent == null) {
             System.out.println("查无信息, 请添加后重试");
             return;
         }
         // 3. 遍历数组, 获取学生信息并打印在控制台
         System.out.println("学号\t\t姓名\t年龄\t生日");
-        for (int i = 0; i < stus.length; i++) {
-            Student stu = stus[i];
+        for (Student stu : allStudent) {
             if (stu != null) {
                 System.out.println(stu.getId() + "\t" + stu.getName() + "\t" + stu.getAge() + "\t\t" + stu.getBirthday());
             }
@@ -85,7 +84,6 @@ public abstract class BaseStudentController {
 
     // 添加学生方法
     public final void addStudent() {
-        // StudentService studentService = new StudentService();
         // 1. 键盘接收学生信息
         String id;
         while (true) {

@@ -7,8 +7,8 @@ import java.util.Scanner;
 
 public class TeacherController {
 
-    private Scanner sc = new Scanner(System.in);
-    private TeacherService teacherService = new TeacherService();
+    private final Scanner sc = new Scanner(System.in);
+    private final TeacherService teacherService = new TeacherService();
 
     public void start() {
 
@@ -80,8 +80,7 @@ public class TeacherController {
 
         // 3. 遍历数组, 取出元素, 并打印在控制台
         System.out.println("学号\t\t姓名\t年龄\t生日");
-        for (int i = 0; i < teachers.length; i++) {
-            Teacher t = teachers[i];
+        for (Teacher t : teachers) {
             if (t != null) {
                 System.out.println(t.getId() + "\t" + t.getName() + "\t" + t.getAge() + "\t\t" + t.getBirthday());
             }

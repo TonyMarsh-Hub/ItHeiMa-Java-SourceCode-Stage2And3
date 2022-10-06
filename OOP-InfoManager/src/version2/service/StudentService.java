@@ -1,8 +1,6 @@
 package version2.service;
 
 import version2.dao.BaseStudentDao;
-import version2.dao.OtherStudentDao;
-import version2.dao.StudentDao;
 import version2.domain.Student;
 import version2.factory.StudentDaoFactory;
 
@@ -11,7 +9,7 @@ public class StudentService {
     // private OtherStudentDao studentDao = new OtherStudentDao();
 
     // 通过学生库管工厂类, 获取库管对象
-    private BaseStudentDao studentDao = StudentDaoFactory.getStudentDao();
+    private final BaseStudentDao studentDao = StudentDaoFactory.getStudentDao();
 
     // 添加学生方法
     public boolean addStudent(Student stu) {
@@ -21,13 +19,12 @@ public class StudentService {
     }
     // 判断学号是否存在方法
     public boolean isExists(String id) {
-        Student[] stus = studentDao.findAllStudent();
+        Student[] allStudent = studentDao.findAllStudent();
         // 假设id在数组中不存在
         boolean exists = false;
         // 遍历数组, 获取每一个学生对象, 准备进行判断
-        for (int i = 0; i < stus.length; i++) {
-            Student student = stus[i];
-            if(student != null && student.getId().equals(id)){
+        for (Student student : allStudent) {
+            if (student != null && student.getId().equals(id)) {
                 exists = true;
                 break;
             }
@@ -42,9 +39,8 @@ public class StudentService {
         // 2. 判断数组中是否有学生信息 (有: 返回地址,  没有: 返回null)
         // 思路: 数组中只要存在一个不是null的元素, 那就代表有学生信息
         boolean flag = false;
-        for (int i = 0; i < allStudent.length; i++) {
-            Student stu = allStudent[i];
-            if(stu != null){
+        for (Student stu : allStudent) {
+            if (stu != null) {
                 flag = true;
                 break;
             }

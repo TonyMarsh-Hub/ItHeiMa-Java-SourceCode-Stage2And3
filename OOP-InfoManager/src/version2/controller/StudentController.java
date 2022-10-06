@@ -1,13 +1,12 @@
 package version2.controller;
 
 import version2.domain.Student;
-import version2.service.StudentService;
 
 import java.util.Scanner;
 
 public class StudentController extends BaseStudentController {
 
-    private Scanner sc = new Scanner(System.in);
+    private final Scanner sc = new Scanner(System.in);
 
     // 键盘录入学生信息
     // 开闭原则: 对扩展内容开放, 对修改内容关闭
