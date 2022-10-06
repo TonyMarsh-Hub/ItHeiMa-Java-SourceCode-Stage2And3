@@ -1,8 +1,8 @@
 package version2.factory;
 
-import com.itheima.edu.info.manager.dao.BaseStudentDao;
-import com.itheima.edu.info.manager.dao.OtherStudentDao;
-import com.itheima.edu.info.manager.dao.StudentDao;
+import version2.dao.BaseStudentDao;
+import version2.dao.OtherStudentDao;
+import version2.dao.StudentDao;
 
 public class StudentDaoFactory {
     public static BaseStudentDao getStudentDao(){

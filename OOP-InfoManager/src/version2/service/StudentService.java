@@ -1,10 +1,10 @@
 package version2.service;
 
-import com.itheima.edu.info.manager.dao.BaseStudentDao;
-import com.itheima.edu.info.manager.dao.OtherStudentDao;
-import com.itheima.edu.info.manager.dao.StudentDao;
-import com.itheima.edu.info.manager.domain.Student;
-import com.itheima.edu.info.manager.factory.StudentDaoFactory;
+import version2.dao.BaseStudentDao;
+import version2.dao.OtherStudentDao;
+import version2.dao.StudentDao;
+import version2.domain.Student;
+import version2.factory.StudentDaoFactory;
 
 public class StudentService {
     // 创建StudentDao (库管)

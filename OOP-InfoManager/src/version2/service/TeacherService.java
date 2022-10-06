@@ -1,7 +1,7 @@
 package version2.service;
 
-import com.itheima.edu.info.manager.dao.TeacherDao;
-import com.itheima.edu.info.manager.domain.Teacher;
+import version2.dao.TeacherDao;
+import version2.domain.Teacher;
 
 public class TeacherService {
 

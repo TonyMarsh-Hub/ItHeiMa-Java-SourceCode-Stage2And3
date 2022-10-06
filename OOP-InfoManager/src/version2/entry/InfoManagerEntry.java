@@ -1,8 +1,8 @@
 package version2.entry;
 
-import com.itheima.edu.info.manager.controller.OtherStudentController;
-import com.itheima.edu.info.manager.controller.StudentController;
-import com.itheima.edu.info.manager.controller.TeacherController;
+import version2.controller.OtherStudentController;
+import version2.controller.StudentController;
+import version2.controller.TeacherController;
 
 import java.util.Scanner;
 

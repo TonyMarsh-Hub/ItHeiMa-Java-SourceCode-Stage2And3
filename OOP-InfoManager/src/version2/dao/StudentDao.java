@@ -1,6 +1,6 @@
 package version2.dao;
 
-import com.itheima.edu.info.manager.domain.Student;
+import version2.domain.Student;
 
 public class StudentDao implements BaseStudentDao {
     // 创建学生对象数组

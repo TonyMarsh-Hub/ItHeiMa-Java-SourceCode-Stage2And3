@@ -1,6 +1,6 @@
 package version2.dao;
 
-import com.itheima.edu.info.manager.domain.Student;
+import version2.domain.Student;
 
 import java.util.ArrayList;
 

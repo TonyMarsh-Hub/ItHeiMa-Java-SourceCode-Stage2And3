@@ -1,7 +1,7 @@
 package version2.controller;
 
-import com.itheima.edu.info.manager.domain.Teacher;
-import com.itheima.edu.info.manager.service.TeacherService;
+import version2.domain.Teacher;
+import version2.service.TeacherService;
 
 import java.util.Scanner;
 
