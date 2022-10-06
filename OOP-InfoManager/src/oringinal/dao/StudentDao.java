@@ -1,6 +1,6 @@
-package dao;
+package oringinal.dao;
 
-import domain.Student;
+import oringinal.domain.Student;
 
 public class StudentDao {
     // 创建学生对象数组

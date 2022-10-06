@@ -1,7 +1,7 @@
-package service;
+package oringinal.service;
 
-import dao.StudentDao;
-import domain.Student;
+import oringinal.dao.StudentDao;
+import oringinal.domain.Student;
 
 public class StudentService {
     // 创建StudentDao (库管)

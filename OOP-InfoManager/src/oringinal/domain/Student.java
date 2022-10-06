@@ -1,15 +1,15 @@
-package domain;
+package oringinal.domain;
 
-public class Teacher{
+public class Student{
     private String id;
     private String name;
     private String age;
     private String birthday;
 
-    public Teacher() {
+    public Student() {
     }
 
-    public Teacher(String id, String name, String age, String birthday) {
+    public Student(String id, String name, String age, String birthday) {
         this.id = id;
         this.name = name;
         this.age = age;

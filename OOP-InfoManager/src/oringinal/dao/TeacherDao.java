@@ -1,6 +1,6 @@
-package dao;
+package oringinal.dao;
 
-import domain.Teacher;
+import oringinal.domain.Teacher;
 
 public class TeacherDao {
 

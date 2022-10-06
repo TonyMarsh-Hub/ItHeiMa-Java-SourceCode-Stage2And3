@@ -1,7 +1,7 @@
-package controller;
+package oringinal.controller;
 
-import domain.Student;
-import service.StudentService;
+import oringinal.domain.Student;
+import oringinal.service.StudentService;
 
 import java.util.Scanner;
 

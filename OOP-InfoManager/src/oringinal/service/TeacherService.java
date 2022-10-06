@@ -1,7 +1,7 @@
-package service;
+package oringinal.service;
 
-import dao.TeacherDao;
-import domain.Teacher;
+import oringinal.dao.TeacherDao;
+import oringinal.domain.Teacher;
 
 public class TeacherService {
 

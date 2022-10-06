@@ -1,7 +1,7 @@
-package entry;
+package oringinal.entry;
 
-import controller.StudentController;
-import controller.TeacherController;
+import oringinal.controller.StudentController;
+import oringinal.controller.TeacherController;
 
 import java.util.Scanner;
 
