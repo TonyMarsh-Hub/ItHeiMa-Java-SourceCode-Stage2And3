@@ -1,4 +1,4 @@
-package ioproject.bytestream.src.com.itheima.output;
+package IO.src.com.itheima.output;
 
 import java.io.FileOutputStream;
 import java.io.IOException;
