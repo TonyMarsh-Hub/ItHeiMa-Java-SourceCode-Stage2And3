@@ -5,6 +5,10 @@ import java.io.*;
 import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
 
+/**
+ * 使用转换流可以指定编码表,解决乱码问题，但是只能解决读取文件的乱码问题，不能解决写入文件的乱码问题。
+ * 并且在JDK11后，转换流已经被废弃了。更好的做法是直接在字符流的构造参数中指定字符编码，字符编码推荐使用java.nio.charset.Charset类来表示。
+ */
 public class ConvertedDemo1 {
     public static void main(String[] args) throws IOException {
         //method1();
