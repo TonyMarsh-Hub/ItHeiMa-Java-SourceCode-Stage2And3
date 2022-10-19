@@ -36,8 +36,8 @@ public class CharStreamDemo14 {
         //5.把排序之后结果写回到本地 1 2 3 4...
         BufferedWriter bw = new BufferedWriter(new FileWriter("charstream\\sort.txt"));
         //写出
-        for (int i = 0; i < arr.length; i++) {
-            bw.write(arr[i] + " ");
+        for (int j : arr) {
+            bw.write(j + " ");
             bw.flush();
         }
         //释放资源

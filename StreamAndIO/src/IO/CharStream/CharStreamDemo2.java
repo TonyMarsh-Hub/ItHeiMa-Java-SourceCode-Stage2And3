@@ -3,6 +3,7 @@ package IO.CharStream;
 import java.io.UnsupportedEncodingException;
 import java.util.Arrays;
 
+// 演示String类的编解码方法
 public class CharStreamDemo2 {
     public static void main(String[] args) throws UnsupportedEncodingException {
         //method1();
