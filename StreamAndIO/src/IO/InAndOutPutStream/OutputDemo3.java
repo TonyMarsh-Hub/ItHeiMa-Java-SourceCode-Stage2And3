@@ -1,4 +1,4 @@
-package IO.src.com.itheima.output;
+package IO.InAndOutPutStream;
 
 
 import java.io.FileOutputStream;
