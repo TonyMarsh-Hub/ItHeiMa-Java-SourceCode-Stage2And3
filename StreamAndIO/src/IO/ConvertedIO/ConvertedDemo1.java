@@ -3,6 +3,7 @@ package IO.ConvertedIO;
 
 import java.io.*;
 import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
 
 public class ConvertedDemo1 {
     public static void main(String[] args) throws IOException {
@@ -30,7 +31,7 @@ public class ConvertedDemo1 {
         isr.close();
 
 
-        OutputStreamWriter osw = new OutputStreamWriter(new FileOutputStream("C:\\Users\\apple\\Desktop\\b.txt"), "UTF-8");
+        OutputStreamWriter osw = new OutputStreamWriter(new FileOutputStream("C:\\Users\\apple\\Desktop\\b.txt"), StandardCharsets.UTF_8);
         osw.write("我爱学习,谁也别打扰我");
         osw.close();
     }

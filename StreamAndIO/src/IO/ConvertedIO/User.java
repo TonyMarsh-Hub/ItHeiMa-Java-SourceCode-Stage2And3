@@ -1,5 +1,6 @@
 package IO.ConvertedIO;
 
+import java.io.Serial;
 import java.io.Serializable;
 
 //如果想要这个类的对象能被序列化,那么这个类必须要实现一个接口.Serializable
@@ -19,6 +20,7 @@ public class User implements Serializable {
     //解决?
     //不让虚拟机帮我们自动计算,我们自己手动给出.而且这个值不要变.
 
+    @Serial
     private static final long serialVersionUID = 1L;
 
     private String username;
