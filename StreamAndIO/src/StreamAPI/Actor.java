@@ -1,4 +1,4 @@
-package mystream.src.com.itheima.streamdemo;
+package StreamAPI;
 
 public class Actor {
     private String name;

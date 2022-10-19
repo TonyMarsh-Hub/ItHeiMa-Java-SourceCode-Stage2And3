@@ -1,4 +1,4 @@
-package mystream.src.com.itheima.streamdemo;
+package StreamAPI;
 
 import java.util.ArrayList;
 import java.util.List;
