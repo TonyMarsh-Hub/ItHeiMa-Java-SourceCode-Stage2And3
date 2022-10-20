@@ -15,7 +15,7 @@ public class Test1 {
 
         //单列 List(保留重复)
         ArrayList<String> list = new ArrayList<>();
-        BufferedReader br = new BufferedReader(new FileReader("names.txt"));
+        BufferedReader br = new BufferedReader(new FileReader("StreamAndIO/src/IO/BonusExercise/names.txt"));
         String line;
         while ((line = br.readLine()) != null) {
             list.add(line);
