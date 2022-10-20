@@ -1,5 +1,6 @@
 package threaddemo1;
 
+//展示多线程执行的特点:交替执行
 public class Demo {
     public static void main(String[] args) {
         //创建一个线程对象
