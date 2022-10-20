@@ -1,5 +1,8 @@
 package threaddemo2;
 
+/**
+ * 通过Runnable接口来创建自己的线程
+ */
 public class Demo {
     public static void main(String[] args) {
         //创建了一个参数的对象
