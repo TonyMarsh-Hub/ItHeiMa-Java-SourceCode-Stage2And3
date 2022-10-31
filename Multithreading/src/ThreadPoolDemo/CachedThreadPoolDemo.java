@@ -6,7 +6,7 @@ import java.util.concurrent.Executors;
 /**
  * 一个使用JDKExecutor线程池的代码示例
  */
-public class MyThreadPoolDemo {
+public class CachedThreadPoolDemo {
     public static void main(String[] args) {
         //1.创建一个默认的线程池对象，池子中默认是空的，默认最多可以容纳int类型的最大值个线程
         ExecutorService executorService = Executors.newCachedThreadPool();

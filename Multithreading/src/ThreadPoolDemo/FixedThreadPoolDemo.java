@@ -7,7 +7,7 @@ import java.util.concurrent.ThreadPoolExecutor;
 /**
  * 一个使用FixedThreadPool线程池的代码示例,参数为线程池中线程的最大个数
  */
-public class MyThreadPoolDemo2 {
+public class FixedThreadPoolDemo {
     public static void main(String[] args) {
         //注意参数不是初始值而是最大值
         ExecutorService executorService = Executors.newFixedThreadPool(10);
