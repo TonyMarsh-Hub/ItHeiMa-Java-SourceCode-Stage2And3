@@ -15,8 +15,8 @@ public class MyThreadPoolDemo2 {
         ThreadPoolExecutor pool = (ThreadPoolExecutor) executorService;//向下转型,使用该对象中的一些静态方法,可以获取线程池的一些信息
         System.out.println(pool.getPoolSize());//0
 
-        executorService.submit(() -> System.out.println(Thread.currentThread().getName() + "在执行了"));
-        executorService.submit(() -> System.out.println(Thread.currentThread().getName() + "在执行了"));
+        pool.submit(() -> System.out.println(Thread.currentThread().getName() + "在执行了"));
+        pool.submit(() -> System.out.println(Thread.currentThread().getName() + "在执行了"));
 
         System.out.println(pool.getPoolSize());//2
         //可以多添加几个任务,最终效果是线程池中的线程数不会超过10个
