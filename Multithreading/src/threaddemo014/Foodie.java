@@ -11,16 +11,16 @@ public class Foodie extends Thread {
 //        汉堡包的总数量减一
 
         //套路:
-            //1. while(true)死循环
-            //2. synchronized 锁,锁对象要唯一
-            //3. 判断,共享数据是否结束. 结束
-            //4. 判断,共享数据是否结束. 没有结束
-        while(true){
-            synchronized (Desk.lock){
-                if(Desk.count == 0){
+        //1. while(true)死循环
+        //2. synchronized 锁,锁对象要唯一
+        //3. 判断,共享数据是否结束. 结束？跳出循环
+        //4. 判断,共享数据是否结束. 没有结束，执行操作
+        while (true) {
+            synchronized (Desk.lock) {
+                if (Desk.count == 0) {
                     break;
-                }else{
-                    if(Desk.flag){
+                } else {
+                    if (Desk.flag) {
                         //有
                         System.out.println("吃货在吃汉堡包");
                         Desk.flag = false;
