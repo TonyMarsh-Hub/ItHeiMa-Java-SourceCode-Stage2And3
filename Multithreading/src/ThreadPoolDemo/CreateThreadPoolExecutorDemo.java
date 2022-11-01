@@ -24,8 +24,11 @@ public class CreateThreadPoolExecutorDemo {
         //workQueue：      任务队列，不能为null
         //threadFactory：  创建线程工厂,不能为null
         //handler：        任务的拒绝策略,不能为null
-        ThreadPoolExecutor pool = new ThreadPoolExecutor(2, 5,
-                2, TimeUnit.SECONDS,
+        ThreadPoolExecutor pool = new ThreadPoolExecutor(
+                2,
+                5,
+                2,
+                TimeUnit.SECONDS,
                 new ArrayBlockingQueue<>(10),
                 Executors.defaultThreadFactory(),
                 new ThreadPoolExecutor.AbortPolicy());
