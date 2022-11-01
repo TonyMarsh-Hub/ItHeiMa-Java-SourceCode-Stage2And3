@@ -1,4 +1,4 @@
-package ThreadPoolDemo;
+package ThreadPoolDemo.ThreadPoolExecutorDemo;
 
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.Executors;
@@ -6,9 +6,10 @@ import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 
 /**
- * 一个使用ThreadPoolExecutor线程池的代码示例
+ * 一个使用ThreadPoolExecutor线程池的代码示例<br>
+ * 之前使用的cached与fixed线程池都是ThreadPoolExecutor的子类，是java预设好参数的,但是这个类是线程池的核心类,可以<u>自定义</u>线程池的各种参数，比如线程池的大小，任务队列的大小等等。
  */
-public class CreateThreadPoolExecutorDemo {
+public class CreateDemo {
     //参数一：核心线程数量
     //参数二：最大线程数
     //参数三：空闲线程最大存活时间
