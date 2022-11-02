@@ -5,7 +5,7 @@ import java.net.DatagramPacket;
 import java.net.DatagramSocket;
 import java.net.InetAddress;
 
-public class ClinetDemo {
+public class ClientDemo {
     public static void main(String[] args) throws IOException {
         DatagramSocket ds = new DatagramSocket();
 
