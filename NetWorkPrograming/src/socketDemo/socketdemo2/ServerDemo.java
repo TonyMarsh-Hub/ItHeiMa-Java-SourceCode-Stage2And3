@@ -24,6 +24,7 @@ public class ServerDemo {
 
         //4.从新的箱子里面获取礼物
         // byte[] data = dp.getData();
+        // getData的步骤可以省略,直接使用bytes，因为dp.getData()的返回值就是之前构造时传递的参数。
         int length = dp.getLength();
         System.out.println(new String(bytes, 0, length));
 
