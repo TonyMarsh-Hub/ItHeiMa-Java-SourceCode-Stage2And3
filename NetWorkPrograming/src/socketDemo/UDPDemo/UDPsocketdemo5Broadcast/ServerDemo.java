@@ -1,4 +1,4 @@
-package socketDemo.UDPsocketdemo4Multicast;
+package socketDemo.UDPDemo.UDPsocketdemo5Broadcast;
 
 import java.io.IOException;
 import java.net.DatagramPacket;

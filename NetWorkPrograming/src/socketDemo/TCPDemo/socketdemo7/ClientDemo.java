@@ -1,4 +1,4 @@
-package socketDemo.socketdemo7;
+package socketDemo.TCPDemo.socketdemo7;
 
 import java.io.BufferedReader;
 import java.io.IOException;

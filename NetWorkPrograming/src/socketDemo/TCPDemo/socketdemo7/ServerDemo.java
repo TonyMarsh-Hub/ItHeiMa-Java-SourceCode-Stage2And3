@@ -1,29 +1,35 @@
-package socketDemo.socketdemo6;
+package socketDemo.TCPDemo.socketdemo7;
 
+import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.OutputStreamWriter;
 import java.net.ServerSocket;
 import java.net.Socket;
 
 public class ServerDemo {
     public static void main(String[] args) throws IOException {
-        //1. 创建Socket对象
         ServerSocket ss = new ServerSocket(10000);
-        //2. 等待客户端连接
-        System.out.println(111);
+
         Socket accept = ss.accept();
-        System.out.println(222);
-        //3.获得输入流对象
+
         InputStream is = accept.getInputStream();
         int b;
         while ((b = is.read()) != -1) {
-            System.out.print((char) b);
+            System.out.println((char) b);
         }
 
         System.out.println("看看我执行了吗?");
+       /* OutputStream os = accept.getOutputStream();
+        os.write("你谁啊?".getBytes());*/
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(accept.getOutputStream()));
+        bw.write("你谁啊?");
+        bw.newLine();
+        bw.flush();
 
-        //4.释放资源
+        bw.close();
         is.close();
+        accept.close();
         ss.close();
     }
 }

@@ -1,4 +1,4 @@
-package socketDemo.socketdemo8;
+package socketDemo.TCPDemo.socketdemo8;
 
 import java.io.*;
 import java.net.Socket;
