@@ -1,4 +1,4 @@
-package socketDemo.socketdemo3;
+package socketDemo.UDPsocketdemo3Unicast;
 
 import java.io.IOException;
 import java.net.DatagramPacket;
