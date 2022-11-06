@@ -1,4 +1,4 @@
-package socketDemo.TCPDemo.socketdemo8;
+package socketDemo.TCPDemo.socketdemo8fileTransfer;
 
 import java.io.*;
 import java.net.ServerSocket;
@@ -19,15 +19,8 @@ public class ServerDemo {
         while ((b = bis.read()) != -1) {
             bos.write(b);
         }
-        //将字节输入流FileInputStream   转成     字符输入流  Fliereader
 
-        //通过转换流
-        InputStreamReader inputStreamReader = new InputStreamReader(accept.getInputStream());
-
-        //通过缓冲输入字符流
-        BufferedReader br = new BufferedReader(inputStreamReader);
-
-
+        // 给客户端反馈
         OutputStreamWriter outputStreamWriter = new OutputStreamWriter(accept.getOutputStream());
         BufferedWriter bw = new BufferedWriter(outputStreamWriter);
         bw.write("上传成功");

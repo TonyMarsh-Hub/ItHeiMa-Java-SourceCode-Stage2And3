@@ -1,4 +1,4 @@
-package socketDemo.TCPDemo.socketdemo7;
+package socketDemo.TCPDemo.socketdemo7ImprovedOne;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -14,13 +14,6 @@ public class ClientDemo {
         os.write("hello".getBytes());
         // os.close();如果在这里关流,会导致整个socket都无法使用
         socket.shutdownOutput();//仅仅关闭输出流.并写一个结束标记,对socket没有任何影响
-
-
-        /*InputStream is = socket.getInputStream();
-        int b;
-        while((b = is.read()) !=-1){
-            System.out.println((char) b);
-        }*/
 
         BufferedReader br = new BufferedReader(new InputStreamReader(socket.getInputStream()));
         String line;

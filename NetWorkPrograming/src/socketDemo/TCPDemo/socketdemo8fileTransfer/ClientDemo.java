@@ -1,4 +1,4 @@
-package socketDemo.TCPDemo.socketdemo8;
+package socketDemo.TCPDemo.socketdemo8fileTransfer;
 
 import java.io.*;
 import java.net.Socket;
@@ -12,7 +12,7 @@ public class ClientDemo {
 
         //写到服务器 --- 网络中的流
         OutputStream os = socket.getOutputStream();
-        BufferedOutputStream bos = new BufferedOutputStream(os);
+        BufferedOutputStream bos = new BufferedOutputStream(os); // 使用缓冲流,提高效率
 
         int b;
         while ((b = bis.read()) != -1) {
@@ -22,7 +22,7 @@ public class ClientDemo {
         //给服务器一个结束标记,告诉服务器文件已经传输完毕
         socket.shutdownOutput();
 
-
+        // 读取服务器的反馈
         BufferedReader br = new BufferedReader(new InputStreamReader(socket.getInputStream()));
         String line;
         while ((line = br.readLine()) != null) {
