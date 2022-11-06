@@ -1,4 +1,4 @@
-package socketDemo.TCPDemo.socketdemo6;
+package socketDemo.TCPDemo.socketdemo6simpleOne;
 
 import java.io.IOException;
 import java.io.OutputStream;
@@ -13,9 +13,6 @@ public class ClientDemo {
         OutputStream os = socket.getOutputStream();
         os.write("hello".getBytes());
 
-        /*while(true){
-
-        }*/
         //3.释放资源
         os.close();
         socket.close();
