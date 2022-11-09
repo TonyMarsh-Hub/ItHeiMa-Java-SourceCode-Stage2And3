@@ -4,11 +4,10 @@ public class Student {
 
     public String name;
 
-    public int age;
+    private final int money = 300;
 
     public String gender;
-
-    private int money = 300;
+    public int age = 10;
 
 
     @Override
