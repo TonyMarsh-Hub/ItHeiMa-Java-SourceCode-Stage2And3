@@ -10,6 +10,7 @@
       <module fileurl="file://$PROJECT_DIR$/NetWorkPrograming/NetWorkPrograming.iml" filepath="$PROJECT_DIR$/NetWorkPrograming/NetWorkPrograming.iml" />
       <module fileurl="file://$PROJECT_DIR$/OOP-InfoManager/OOP-InfoManager.iml" filepath="$PROJECT_DIR$/OOP-InfoManager/OOP-InfoManager.iml" />
       <module fileurl="file://$PROJECT_DIR$/StreamAndIO/StreamAndIO.iml" filepath="$PROJECT_DIR$/StreamAndIO/StreamAndIO.iml" />
+      <module fileurl="file://$PROJECT_DIR$/XMLDemo/XMLDemo.iml" filepath="$PROJECT_DIR$/XMLDemo/XMLDemo.iml" />
     </modules>
   </component>
 </project>
