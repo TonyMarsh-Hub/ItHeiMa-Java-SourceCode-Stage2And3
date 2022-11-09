@@ -3,13 +3,13 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/ClassLoaderAndReflect/ClassLoaderAndReflect.iml" filepath="$PROJECT_DIR$/ClassLoaderAndReflect/ClassLoaderAndReflect.iml" />
+      <module fileurl="file://$PROJECT_DIR$/EnumDemo/EnumDemo.iml" filepath="$PROJECT_DIR$/EnumDemo/EnumDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/JavaCommonAPI/JavaCommonAPI.iml" filepath="$PROJECT_DIR$/JavaCommonAPI/JavaCommonAPI.iml" />
+      <module fileurl="file://$PROJECT_DIR$/LogbackDemo/LogbackDemo.iml" filepath="$PROJECT_DIR$/LogbackDemo/LogbackDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/Multithreading/Multithreading.iml" filepath="$PROJECT_DIR$/Multithreading/Multithreading.iml" />
       <module fileurl="file://$PROJECT_DIR$/NetWorkPrograming/NetWorkPrograming.iml" filepath="$PROJECT_DIR$/NetWorkPrograming/NetWorkPrograming.iml" />
       <module fileurl="file://$PROJECT_DIR$/OOP-InfoManager/OOP-InfoManager.iml" filepath="$PROJECT_DIR$/OOP-InfoManager/OOP-InfoManager.iml" />
       <module fileurl="file://$PROJECT_DIR$/StreamAndIO/StreamAndIO.iml" filepath="$PROJECT_DIR$/StreamAndIO/StreamAndIO.iml" />
-      <module fileurl="file://$PROJECT_DIR$/UsingEnum/UsingEnum.iml" filepath="$PROJECT_DIR$/UsingEnum/UsingEnum.iml" />
-      <module fileurl="file://$PROJECT_DIR$/UsingLogback/UsingLogback.iml" filepath="$PROJECT_DIR$/UsingLogback/UsingLogback.iml" />
     </modules>
   </component>
 </project>
