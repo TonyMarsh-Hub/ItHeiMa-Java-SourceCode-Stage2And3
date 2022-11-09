@@ -5,6 +5,9 @@ package myclassloader;
  */
 public class ClassLoaderDemo1 {
     public static void main(String[] args) {
+        //Bootstrap class loader：虚拟机的内置类加载器，通常表示为null ，并且没有父null
+        //Platform class loader：平台类加载器,负责加载JDK中一些特殊的模块
+        //System class loader：系统类加载器,负责加载用户类路径上所指定的类库
         //获取系统类加载器
         ClassLoader systemClassLoader = ClassLoader.getSystemClassLoader();
 
