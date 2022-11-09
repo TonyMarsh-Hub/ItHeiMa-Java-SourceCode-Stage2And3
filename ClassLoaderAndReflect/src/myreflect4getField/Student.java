@@ -1,4 +1,4 @@
-package myreflect4;
+package myreflect4getField;
 
 public class Student {
 

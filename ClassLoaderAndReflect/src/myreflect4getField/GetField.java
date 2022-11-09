@@ -1,4 +1,4 @@
-package myreflect4;
+package myreflect4getField;
 
 import java.lang.reflect.Field;
 
@@ -17,7 +17,7 @@ public class GetField {
     private static void method1() throws ClassNotFoundException {
         // Field[] getFields()：返回所有公共成员变量对象的数组
         //1.获取class对象
-        Class<?> clazz = Class.forName("myreflect4.Student");
+        Class<?> clazz = Class.forName("myreflect4getField.Student");
         //2.获取Field对象.
         Field[] fields = clazz.getFields();
         //3.遍历
@@ -29,7 +29,7 @@ public class GetField {
     private static void method2() throws ClassNotFoundException {
         // Field[] getDeclaredFields()：返回所有成员变量对象的数组
         //1.获取class对象
-        Class<?> clazz = Class.forName("myreflect4.Student");
+        Class<?> clazz = Class.forName("myreflect4getField.Student");
         //2.获取所有的Field对象
         Field[] fields = clazz.getDeclaredFields();
         //3.遍历
@@ -44,7 +44,7 @@ public class GetField {
         //且必须是public修饰的.
 
         //1.获取class对象
-        Class<?> clazz = Class.forName("myreflect4.Student");
+        Class<?> clazz = Class.forName("myreflect4getField.Student");
         //2.获取name这个成员变量
         Field field = clazz.getField("age");
         //3.打印一下
@@ -55,7 +55,7 @@ public class GetField {
         // Field getDeclaredField(String name)：返回单个成员变量对象
 
         //1.获取class对象
-        Class<?> clazz = Class.forName("myreflect4.Student");
+        Class<?> clazz = Class.forName("myreflect4getField.Student");
         //2.获取money成员变量
         Field field = clazz.getDeclaredField("money");
         //3.打印一下

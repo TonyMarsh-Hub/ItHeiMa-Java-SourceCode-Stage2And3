@@ -1,4 +1,4 @@
-package myreflect4;
+package myreflect4getField;
 
 import java.lang.reflect.Field;
 
@@ -15,7 +15,7 @@ public class UseField {
     private static void method1() throws ClassNotFoundException, NoSuchFieldException, InstantiationException, IllegalAccessException {
         //void set(Object obj, Object value)：给obj对象的成员变量赋值为value
         //1.获取class对象
-        Class<?> clazz = Class.forName("myreflect4.Student");
+        Class<?> clazz = Class.forName("myreflect4getField.Student");
         //2.获取name这个Field对象
         Field field = clazz.getField("name");
         //3.利用set方法进行赋值,但是赋值操作的对象应该是一个类而不是Class，（set方法的第一个参数是一个普通对象而不是字节码文件class类对象）
@@ -29,7 +29,7 @@ public class UseField {
 
     private static void method2() throws ClassNotFoundException, NoSuchFieldException, InstantiationException, IllegalAccessException {
         //1.获取class对象
-        Class<?> clazz = Class.forName("myreflect4.Student");
+        Class<?> clazz = Class.forName("myreflect4getField.Student");
         //2.获取成员变量Field的对象
         Field field = clazz.getDeclaredField("money");
         //3.取消一下访问检查
