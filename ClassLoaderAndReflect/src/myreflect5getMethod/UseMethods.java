@@ -14,7 +14,7 @@ public class UseMethods {
         //返回值：方法的返回值（如果没有就不写）
 
         //1.获取class对象
-        Class<?> clazz = Class.forName("myreflect5.Student");
+        Class<?> clazz = Class.forName("myreflect5getMethod.Student");
         //2.获取里面的Method对象  function4
         Method method = clazz.getMethod("function4", String.class);
         //3.运行function4方法就可以了
