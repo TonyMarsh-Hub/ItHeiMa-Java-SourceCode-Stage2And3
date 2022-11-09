@@ -1,4 +1,4 @@
-package myreflect5;
+package myreflect5getMethod;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
@@ -6,7 +6,7 @@ import java.lang.reflect.Method;
 /**
  * 获取Method对象并运行
  */
-public class ReflectDemo2 {
+public class UseMethods {
     public static void main(String[] args) throws ClassNotFoundException, NoSuchMethodException, IllegalAccessException, InstantiationException, InvocationTargetException {
 //        Object invoke​(Object obj, Object... args)：运行方法
 //        参数一：用obj对象调用该方法

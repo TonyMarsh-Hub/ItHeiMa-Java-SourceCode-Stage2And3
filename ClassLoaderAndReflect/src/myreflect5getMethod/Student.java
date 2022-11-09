@@ -1,4 +1,4 @@
-package myreflect5;
+package myreflect5getMethod;
 
 public class Student {
 

@@ -1,4 +1,4 @@
-package myreflect5;
+package myreflect5getMethod;
 
 import java.lang.reflect.Method;
 
@@ -6,14 +6,13 @@ import java.lang.reflect.Method;
  * 获取Method对象
  */
 
-public class ReflectDemo1 {
+public class GetMethods {
     public static void main(String[] args) throws ClassNotFoundException, NoSuchMethodException {
         //method1();
         //method2();
         //method3();
         //method4();
         //method5();
-
 
     }
 
