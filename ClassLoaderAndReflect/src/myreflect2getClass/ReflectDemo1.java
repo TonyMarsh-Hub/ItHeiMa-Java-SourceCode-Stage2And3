@@ -1,4 +1,4 @@
-package myreflect2;
+package myreflect2getClass;
 
 /**
  * 获取class对象的三种方式
@@ -7,7 +7,7 @@ public class ReflectDemo1 {
     public static void main(String[] args) throws ClassNotFoundException {
         // 1.Class类中的静态方法forName("全类名")
         // 全类名:包名 + 类名
-        Class<?> myClass1 = Class.forName("myreflect2.Student");
+        Class<?> myClass1 = Class.forName("myreflect2getClass.Student");
 
         // 2.通过class属性来获取
         Class<Student> myClass2 = Student.class;

@@ -1,4 +1,4 @@
-package myreflect1;
+package myreflect1getstarted;
 
 public class Worker {
     private String name;

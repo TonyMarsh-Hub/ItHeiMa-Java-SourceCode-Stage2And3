@@ -1,4 +1,4 @@
-package myreflect1;
+package myreflect1getstarted;
 
 public class Student {
     private String name;

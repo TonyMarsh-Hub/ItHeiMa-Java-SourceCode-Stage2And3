@@ -1,13 +1,13 @@
-package myreflect2;
+package myreflect1getstarted;
 
-public class Student {
+public class Teacher {
     private String name;
     private int age;
 
-    public Student() {
+    public Teacher() {
     }
 
-    public Student(String name, int age) {
+    public Teacher(String name, int age) {
         this.name = name;
         this.age = age;
     }
@@ -28,13 +28,13 @@ public class Student {
         this.age = age;
     }
 
-    public void study() {
-        System.out.println("学生在学习");
+    public void teach() {
+        System.out.println("老师在上课");
     }
 
     @Override
     public String toString() {
-        return "Student{" +
+        return "Teacher{" +
                 "name='" + name + '\'' +
                 ", age=" + age +
                 '}';

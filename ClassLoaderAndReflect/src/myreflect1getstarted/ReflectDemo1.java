@@ -1,4 +1,4 @@
-package myreflect1;
+package myreflect1getstarted;
 
 import java.io.IOException;
 import java.io.InputStream;
