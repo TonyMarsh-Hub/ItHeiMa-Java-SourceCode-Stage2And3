@@ -13,7 +13,6 @@ public class UseTest {
         System.out.println("UseTest....method....");
     }
 
-
     //没有使用Test注解
     @Test
     public void function() {
