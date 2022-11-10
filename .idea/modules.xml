@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/ClassLoaderAndReflect/ClassLoaderAndReflect.iml" filepath="$PROJECT_DIR$/ClassLoaderAndReflect/ClassLoaderAndReflect.iml" />
       <module fileurl="file://$PROJECT_DIR$/EnumDemo/EnumDemo.iml" filepath="$PROJECT_DIR$/EnumDemo/EnumDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/JavaCommonAPI/JavaCommonAPI.iml" filepath="$PROJECT_DIR$/JavaCommonAPI/JavaCommonAPI.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JunitDemo/JunitDemo.iml" filepath="$PROJECT_DIR$/JunitDemo/JunitDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/LogbackDemo/LogbackDemo.iml" filepath="$PROJECT_DIR$/LogbackDemo/LogbackDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/Multithreading/Multithreading.iml" filepath="$PROJECT_DIR$/Multithreading/Multithreading.iml" />
       <module fileurl="file://$PROJECT_DIR$/NetWorkPrograming/NetWorkPrograming.iml" filepath="$PROJECT_DIR$/NetWorkPrograming/NetWorkPrograming.iml" />
