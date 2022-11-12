@@ -19,16 +19,12 @@ public class DruidDemo {
 
         //3. 加载配置文件
         Properties prop = new Properties();
-        prop.load(new FileInputStream("jdbc-demo/src/druid.properties"));
-        //4. 获取连接池对象
+        prop.load(new FileInputStream("JDBC_Demo/src/druid.properties"));
+        //4. 获取连接池对象,参数为配置文件中的配置
         DataSource dataSource = DruidDataSourceFactory.createDataSource(prop);
-
-        //5. 获取数据库连接 Connection
+        //5. 通过连接池来获取数据库连接 Connection
         Connection connection = dataSource.getConnection();
 
         System.out.println(connection);
-
-
-        //System.out.println(System.getProperty("user.dir"));
     }
 }

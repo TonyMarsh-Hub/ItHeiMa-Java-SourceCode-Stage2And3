@@ -1,4 +1,4 @@
-package example;
+package exercise;
 
 import com.alibaba.druid.pool.DruidDataSourceFactory;
 import org.junit.Test;
@@ -30,7 +30,7 @@ public class BrandTest {
         //1. 获取Connection
         //3. 加载配置文件
         Properties prop = new Properties();
-        prop.load(new FileInputStream("jdbc-demo/src/druid.properties"));
+        prop.load(new FileInputStream("src/druid.properties"));
         //4. 获取连接池对象
         DataSource dataSource = DruidDataSourceFactory.createDataSource(prop);
 
@@ -49,7 +49,7 @@ public class BrandTest {
         ResultSet rs = pstmt.executeQuery();
 
         //6. 处理结果 List<Brand> 封装Brand对象，装载List集合
-        Brand brand = null;
+        Brand brand;
         List<Brand> brands = new ArrayList<>();
         while (rs.next()) {
             //获取数据
@@ -102,7 +102,7 @@ public class BrandTest {
         //1. 获取Connection
         //3. 加载配置文件
         Properties prop = new Properties();
-        prop.load(new FileInputStream("jdbc-demo/src/druid.properties"));
+        prop.load(new FileInputStream("src/druid.properties"));
         //4. 获取连接池对象
         DataSource dataSource = DruidDataSourceFactory.createDataSource(prop);
 
@@ -168,7 +168,7 @@ public class BrandTest {
         //1. 获取Connection
         //3. 加载配置文件
         Properties prop = new Properties();
-        prop.load(new FileInputStream("jdbc-demo/src/druid.properties"));
+        prop.load(new FileInputStream("src/druid.properties"));
         //4. 获取连接池对象
         DataSource dataSource = DruidDataSourceFactory.createDataSource(prop);
 
@@ -176,13 +176,14 @@ public class BrandTest {
         Connection conn = dataSource.getConnection();
 
         //2. 定义SQL
-        String sql = " update tb_brand\n" +
-                "         set brand_name  = ?,\n" +
-                "         company_name= ?,\n" +
-                "         ordered     = ?,\n" +
-                "         description = ?,\n" +
-                "         status      = ?\n" +
-                "     where id = ?";
+        String sql = """
+                update tb_brand
+                        set brand_name  = ?,
+                        company_name= ?,
+                        ordered     = ?,
+                        description = ?,
+                        status      = ?
+                    where id = ?""".indent(1);
 
         //3. 获取pstmt对象
         PreparedStatement pstmt = conn.prepareStatement(sql);
@@ -229,7 +230,7 @@ public class BrandTest {
         //1. 获取Connection
         //3. 加载配置文件
         Properties prop = new Properties();
-        prop.load(new FileInputStream("jdbc-demo/src/druid.properties"));
+        prop.load(new FileInputStream("src/druid.properties"));
         //4. 获取连接池对象
         DataSource dataSource = DruidDataSourceFactory.createDataSource(prop);
 
