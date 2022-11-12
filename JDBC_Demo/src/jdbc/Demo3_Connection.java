@@ -7,7 +7,7 @@ import java.sql.Statement;
 /**
  * JDBC API 详解：Connection
  */
-public class JDBCDemo3_Connection {
+public class Demo3_Connection {
 
     public static void main(String[] args) throws Exception {
         //1. 注册驱动

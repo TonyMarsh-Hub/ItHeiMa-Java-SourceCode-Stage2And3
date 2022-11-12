@@ -9,7 +9,7 @@ import java.sql.Statement;
 /**
  * JDBC API 详解：Statement
  */
-public class JDBCDemo4_Statement {
+public class Demo4_Statement {
 
     /**
      * 执行DML语句

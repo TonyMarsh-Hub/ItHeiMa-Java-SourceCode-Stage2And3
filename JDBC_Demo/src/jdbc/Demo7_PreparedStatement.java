@@ -10,7 +10,7 @@ import java.sql.ResultSet;
 /**
  * API详解：PreparedStatement
  */
-public class JDBCDemo7_PreparedStatement {
+public class Demo7_PreparedStatement {
 
     @Test
     public void testPreparedStatement() throws Exception {

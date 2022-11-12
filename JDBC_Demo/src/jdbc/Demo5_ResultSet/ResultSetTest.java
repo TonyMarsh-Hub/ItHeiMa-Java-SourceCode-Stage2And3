@@ -1,4 +1,4 @@
-package jdbc;
+package jdbc.Demo5_ResultSet;
 
 import org.junit.Test;
 import pojo.Account;
@@ -13,7 +13,7 @@ import java.util.List;
 /**
  * JDBC API 详解：ResultSet
  */
-public class JDBCDemo5ResultSetTest {
+public class ResultSetTest {
 
     /**
      * 执行DQL

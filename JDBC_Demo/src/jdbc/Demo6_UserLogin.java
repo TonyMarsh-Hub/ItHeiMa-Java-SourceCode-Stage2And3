@@ -10,7 +10,7 @@ import java.sql.Statement;
 /**
  * 用户登录
  */
-public class JDBCDemo6_UserLogin {
+public class Demo6_UserLogin {
 
 
     @Test
