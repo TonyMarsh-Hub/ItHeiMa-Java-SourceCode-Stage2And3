@@ -1,8 +1,8 @@
 package example;
 
 import com.alibaba.druid.pool.DruidDataSourceFactory;
-import com.itheima.pojo.Brand;
 import org.junit.Test;
+import pojo.Brand;
 
 import javax.sql.DataSource;
 import java.io.FileInputStream;

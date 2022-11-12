@@ -15,10 +15,10 @@ public class JDBCDemo {
         //2. 获取连接
         String url = "jdbc:mysql://127.0.0.1:3306/db1";
         String username = "root";
-        String password = "1234";
+        String password = "root";
         Connection conn = DriverManager.getConnection(url, username, password);
         //3. 定义sql
-        String sql = "update account set money = 2000 where id = 1";
+        String sql = "update user set password = 12345 where id = 1";
         //4. 获取执行sql的对象 Statement
         Statement stmt = conn.createStatement();
         //5. 执行sql

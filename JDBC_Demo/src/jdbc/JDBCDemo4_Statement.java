@@ -23,7 +23,7 @@ public class JDBCDemo4_Statement {
         //2. 获取连接：如果连接的是本机mysql并且端口是默认的 3306 可以简化书写
         String url = "jdbc:mysql:///db1?useSSL=false";
         String username = "root";
-        String password = "1234";
+        String password = "root";
         Connection conn = DriverManager.getConnection(url, username, password);
         //3. 定义sql
         String sql = "update account set money = 3000 where id = 1";

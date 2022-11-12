@@ -1,7 +1,7 @@
 package jdbc;
 
-import com.itheima.pojo.Account;
 import org.junit.Test;
+import pojo.Account;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -13,12 +13,10 @@ import java.util.List;
 /**
  * JDBC API 详解：ResultSet
  */
-public class JDBCDemo5_ResultSet {
+public class JDBCDemo5ResultSetTest {
 
     /**
      * 执行DQL
-     *
-     * @throws Exception
      */
     @Test
     public void testResultSet() throws Exception {
@@ -27,11 +25,11 @@ public class JDBCDemo5_ResultSet {
         //2. 获取连接：如果连接的是本机mysql并且端口是默认的 3306 可以简化书写
         String url = "jdbc:mysql:///db1?useSSL=false";
         String username = "root";
-        String password = "1234";
+        String password = "root";
         Connection conn = DriverManager.getConnection(url, username, password);
 
         //3. 定义sql
-        String sql = "select * from account";
+        String sql = "select * from user";
 
         //4. 获取statement对象
         Statement stmt = conn.createStatement();
@@ -84,7 +82,6 @@ public class JDBCDemo5_ResultSet {
      * 2. 查询数据，封装到Account对象中
      * 3. 将Account对象存入ArrayList集合中
      *
-     * @throws Exception
      */
     @Test
     public void testResultSet2() throws Exception {
@@ -97,7 +94,7 @@ public class JDBCDemo5_ResultSet {
         Connection conn = DriverManager.getConnection(url, username, password);
 
         //3. 定义sql
-        String sql = "select * from account";
+        String sql = "select * from user";
 
         //4. 获取statement对象
         Statement stmt = conn.createStatement();
