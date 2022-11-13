@@ -19,7 +19,7 @@
                 <property name="driver" value="com.mysql.cj.jdbc"/>
                 <property name="url" value="jdbc:mysql:///mybatis?useSSL=false"/>
                 <property name="username" value="root"/>
-                <property name="password" value="1234"/>
+                <property name="password" value="root"/>
             </dataSource>
         </environment>
 
@@ -30,7 +30,7 @@
                 <property name="driver" value="com.mysql.cj.jdbc"/>
                 <property name="url" value="jdbc:mysql:///mybatis?useSSL=false"/>
                 <property name="username" value="root"/>
-                <property name="password" value="1234"/>
+                <property name="password" value="root"/>
             </dataSource>
         </environment>
     </environments>
