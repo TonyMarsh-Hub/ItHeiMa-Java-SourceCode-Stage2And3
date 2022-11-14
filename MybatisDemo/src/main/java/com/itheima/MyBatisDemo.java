@@ -22,7 +22,6 @@ public class MyBatisDemo {
         String resource = "mybatis-config.xml";
         InputStream inputStream = Resources.getResourceAsStream(resource);
         SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
-
         //2. 获取SqlSession对象，用它来执行sql
         SqlSession sqlSession = sqlSessionFactory.openSession();
         //3. 执行sql

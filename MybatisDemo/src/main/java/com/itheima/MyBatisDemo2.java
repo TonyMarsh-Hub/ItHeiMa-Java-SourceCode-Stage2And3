@@ -23,7 +23,6 @@ public class MyBatisDemo2 {
         String resource = "mybatis-config.xml";
         InputStream inputStream = Resources.getResourceAsStream(resource);
         SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
-
         //2. 获取SqlSession对象，用它来执行sql
         SqlSession sqlSession = sqlSessionFactory.openSession();
         //3. 执行sql
@@ -31,7 +30,6 @@ public class MyBatisDemo2 {
         //3.1 获取UserMapper接口的代理对象
         UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
         List<User> users = userMapper.selectAll();
-
         System.out.println(users);
         //4. 释放资源
         sqlSession.close();

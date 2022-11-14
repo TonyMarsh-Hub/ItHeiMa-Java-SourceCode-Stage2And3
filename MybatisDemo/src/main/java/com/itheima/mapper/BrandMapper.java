@@ -8,12 +8,10 @@ import java.util.Map;
 
 public interface BrandMapper {
 
-
     /**
      * 查询所有
      */
     List<Brand> selectAll();
-
 
     /**
      * 查看详情：根据Id查询
@@ -42,12 +40,10 @@ public interface BrandMapper {
      */
     List<Brand> selectByConditionSingle(Brand brand);
 
-
     /**
      * 添加
      */
     void add(Brand brand);
-
 
     /**
      * 修改
@@ -58,7 +54,6 @@ public interface BrandMapper {
      * 根据id删除
      */
     void deleteById(int id);
-
 
     /**
      * 批量删除
