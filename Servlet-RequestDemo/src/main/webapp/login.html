@@ -8,12 +8,16 @@
 
   <body>
     <div id="loginDiv">
-      <form action="/request-demo/loginServlet" id="form" method="post">
+      <form action="/loginServlet" id="form" method="post">
         <h1 id="loginMsg">LOGIN IN</h1>
-        <p>Username:<input id="username" name="username" type="text" /></p>
-
-        <p>Password:<input id="password" name="password" type="password" /></p>
-
+        <p>
+          <label for="username">Username:</label
+          ><input id="username" name="username" type="text" />
+        </p>
+        <p>
+          <label for="password">Password:</label
+          ><input id="password" name="password" type="password" />
+        </p>
         <div id="subDiv">
           <input class="button" type="submit" value="login up" />
           <input class="button" type="reset" value="reset" />&nbsp;&nbsp;&nbsp;
