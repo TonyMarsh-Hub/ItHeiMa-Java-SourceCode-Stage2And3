@@ -8,7 +8,7 @@
 </head>
 <body>
 <h3>添加品牌</h3>
-<form action="/brand-demo/addServlet" method="post">
+<form action="/MVC-Demo/addServlet" method="post">
     <label>
         品牌名称：
         <input name="brandName">
