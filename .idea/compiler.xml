@@ -10,6 +10,7 @@
         <module name="JSP-Demo" />
         <module name="Servlet-RequestResponse-Demo" />
         <module name="MybatisDemo" />
+        <module name="MVC-Demo" />
       </profile>
     </annotationProcessing>
   </component>
