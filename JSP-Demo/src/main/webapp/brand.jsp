@@ -4,7 +4,7 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
 
 <%
-    // 查询数据库
+    // 模拟查询数据库的操作
     List<Brand> brands = new ArrayList<>();
     brands.add(new Brand(1, "三只松鼠", "三只松鼠", 100, "三只松鼠，好吃不上火", 1));
     brands.add(new Brand(2, "优衣库", "优衣库", 200, "优衣库，服适人生", 0));
