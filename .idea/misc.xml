@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/CookieAndSession" />
     <file type="web" url="file://$PROJECT_DIR$/JSP-Demo" />
     <file type="web" url="file://$PROJECT_DIR$/MVC-Demo" />
     <file type="web" url="file://$PROJECT_DIR$/Servlet-RequestResponse-Demo" />
@@ -15,6 +16,7 @@
         <option value="$PROJECT_DIR$/Servlet-RequestResponse-Demo/pom.xml" />
         <option value="$PROJECT_DIR$/JSP-Demo/pom.xml" />
         <option value="$PROJECT_DIR$/MVC-Demo/pom.xml" />
+        <option value="$PROJECT_DIR$/CookieAndSession/pom.xml" />
       </list>
     </option>
   </component>
