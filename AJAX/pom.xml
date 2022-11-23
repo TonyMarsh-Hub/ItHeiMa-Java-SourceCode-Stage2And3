@@ -21,7 +21,7 @@
         <dependency>
             <groupId>org.mybatis</groupId>
             <artifactId>mybatis</artifactId>
-            <version>3.5.5</version>
+            <version>3.5.6</version>
         </dependency>
 
         <!--mysql-->
@@ -41,7 +41,7 @@
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>fastjson</artifactId>
-            <version>1.2.62</version>
+            <version>1.2.83</version>
         </dependency>
     </dependencies>
 
