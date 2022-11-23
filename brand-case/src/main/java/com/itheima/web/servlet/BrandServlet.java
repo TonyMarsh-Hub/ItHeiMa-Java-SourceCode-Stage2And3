@@ -2,6 +2,7 @@ package com.itheima.web.servlet;
 
 import com.alibaba.fastjson.JSON;
 import com.itheima.pojo.Brand;
+import com.itheima.pojo.PageBean;
 import com.itheima.service.BrandService;
 import com.itheima.service.impl.BrandServiceImpl;
 
@@ -57,5 +58,31 @@ public class BrandServlet extends BaseServlet {
 
         //3. 响应成功的标识
         response.getWriter().write("success");
+    }
+
+
+    /**
+     * 完成分页查询
+     *
+     * @param request
+     * @param response
+     * @throws IOException
+     */
+    public void selectByPage(HttpServletRequest request, HttpServletResponse response) throws IOException {
+        //1. 接收参数
+        String currentPageStr = request.getParameter("currentPage");
+        String pageSizeStr = request.getParameter("pageSize");
+        // 类型转换
+        int currentPage = Integer.parseInt(currentPageStr);
+        int pageSize = Integer.parseInt(pageSizeStr);
+        // Service
+        PageBean<Brand> brandPageBean = brandService.selectByPage(currentPage, pageSize);
+
+        //2. 转为JSON
+        String jsonString = JSON.toJSONString(brandPageBean);
+
+        //3. 写数据
+        response.setContentType("text/json;charset=utf-8");
+        response.getWriter().write(jsonString);
     }
 }
