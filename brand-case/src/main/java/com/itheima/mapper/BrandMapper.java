@@ -42,6 +42,7 @@ public interface BrandMapper {
      * @return
      */
     @Select("select * from tb_brand limit #{start},#{rows}")
+    @ResultMap("brandResultMap")
     List<Brand> selectByPage(@Param("start") int start, @Param("rows") int rows);
 
     /**
