@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="CookieAndSession" />
         <module name="JSP-Demo" />
+        <module name="brand-case" />
         <module name="Servlet-RequestResponse-Demo" />
         <module name="MVC-Demo" />
         <module name="ServletDemo" />
