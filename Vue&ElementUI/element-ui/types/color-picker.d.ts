@@ -5,17 +5,17 @@ export type ColorFormat = "hsl" | "hsv" | "hex" | "rgb";
 /** ColorPicker Component */
 export declare class ElColorPicker extends ElementUIComponent {
   /** Whether to display the alpha slider */
-  showAlpha: boolean
+  showAlpha: boolean;
 
   /** Whether to disable the ColorPicker */
-  disabled: boolean
+  disabled: boolean;
 
   /** Size of ColorPicker */
-  size: ElementUIComponentSize
+  size: ElementUIComponentSize;
 
   /** Whether to display the alpha slider */
-  popperClass: string
+  popperClass: string;
 
   /** Custom class name for ColorPicker's dropdown */
-  colorFormat: ColorFormat
+  colorFormat: ColorFormat;
 }

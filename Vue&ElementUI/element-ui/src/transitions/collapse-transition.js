@@ -65,13 +65,13 @@ class Transition {
 }
 
 export default {
-  name: 'ElCollapseTransition',
+  name: "ElCollapseTransition",
   functional: true,
   render(h, { children }) {
     const data = {
-      on: new Transition()
+      on: new Transition(),
     };
 
-    return h('transition', data, children);
-  }
+    return h("transition", data, children);
+  },
 };
