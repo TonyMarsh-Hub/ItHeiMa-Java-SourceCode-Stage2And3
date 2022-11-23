@@ -119,7 +119,7 @@
         :page-sizes="[5, 10, 15, 20]"
         :page-size="5"
         layout="total, sizes, prev, pager, next, jumper"
-        :total="400"
+        :total="totalCount"
       >
       </el-pagination>
     </div>
@@ -152,6 +152,7 @@
         methods: {
           // 查询所有数据
           selectAll() {
+            /*
             var _this = this;
 
             axios({
@@ -159,6 +160,22 @@
               url: "http://localhost:8080/brand-case/brand/selectAll",
             }).then(function (resp) {
               _this.tableData = resp.data;
+            });
+*/
+            // 新的实现方式:查询分页数据
+            let _this = this;
+
+            axios({
+              method: "get",
+              url: "http://localhost:8080/brand-case/brand/selectByPage",
+              params: {
+                currentPage: _this.currentPage,
+                pageSize: _this.pageSize,
+              },
+            }).then(function (resp) {
+              // resp.data = {rows:[{},{},{}], totalCount100}
+              _this.tableData = resp.data.rows;
+              _this.totalCount = resp.data.totalCount;
             });
           },
 
@@ -183,7 +200,7 @@
           // 添加数据
           addBrand() {
             //console.log(this.brand);
-            var _this = this;
+            let _this = this;
 
             // 发送ajax请求，添加数据
             axios({
@@ -191,7 +208,7 @@
               url: "http://localhost:8080/brand-case/brand/add",
               data: _this.brand,
             }).then(function (resp) {
-              if (resp.data == "success") {
+              if (resp.data === "success") {
                 //添加成功
 
                 //关闭窗口
@@ -210,10 +227,16 @@
 
           //分页
           handleSizeChange(val) {
+            //每当每页显示的条数发生变化时，触发的方法
             console.log(`每页 ${val} 条`);
+            this.pageSize = val;
+            this.selectAll(); //重新查询数据
           },
           handleCurrentChange(val) {
+            // 每当页码发生改变时，都会触发这个方法
             console.log(`当前页: ${val}`);
+            this.currentPage = val;
+            this.selectAll(); // 重新查询数据
           },
 
           // 批量删除
@@ -264,7 +287,12 @@
         data() {
           return {
             // 当前页码
-            currentPage: 4,
+            currentPage: 1,
+            // 每页显示的条目数
+            pageSize: 5,
+            // 总记录数
+            totalCount: 0,
+
             // 添加数据对话框是否展示的标记
             dialogVisible: false,
 
