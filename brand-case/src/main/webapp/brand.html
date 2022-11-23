@@ -43,10 +43,10 @@
       <!--按钮-->
 
       <el-row>
-        <el-button type="danger" plain>批量删除</el-button>
+        <el-button @click="deleteByIds" plain type="danger">批量删除</el-button>
         <el-button type="primary" plain @click="dialogVisible = true"
-          >新增</el-button
-        >
+          >新增
+        </el-button>
       </el-row>
       <!--添加数据对话框表单-->
       <el-dialog title="编辑品牌" :visible.sync="dialogVisible" width="30%">
@@ -90,8 +90,8 @@
           :row-class-name="tableRowClassName"
           @selection-change="handleSelectionChange"
         >
-          <el-table-column type="selection" width="55"> </el-table-column>
-          <el-table-column type="index" width="50"> </el-table-column>
+          <el-table-column type="selection" width="55"></el-table-column>
+          <el-table-column type="index" width="50"></el-table-column>
 
           <el-table-column prop="brandName" label="品牌名称" align="center">
           </el-table-column>
@@ -140,13 +140,13 @@
           this.selectAll();
 
           /* var _this = this;
-
-             axios({
-                 method:"get",
-                 url:"http://localhost:8080/brand-case/selectAllServlet"
-             }).then(function (resp) {
-                 _this.tableData = resp.data;
-             })*/
+      
+                   axios({
+                       method:"get",
+                       url:"http://localhost:8080/brand-case/selectAllServlet"
+                   }).then(function (resp) {
+                       _this.tableData = resp.data;
+                   })*/
         },
 
         methods: {
@@ -215,6 +215,35 @@
           handleCurrentChange(val) {
             console.log(`当前页: ${val}`);
           },
+
+          // 批量删除
+          deleteByIds() {
+            // 获取选中的id (在表单元素被选中时，会将数据存储到multipleSelection中)
+            for (let i = 0; i < this.multipleSelection.length; i++) {
+              this.selectedIds.push(this.multipleSelection[i].id); // 只需要id即可
+            }
+            console.log("被选中要删除的id是" + this.selectedIds);
+            // 发送ajax请求
+            var _this = this;
+            axios({
+              method: "post",
+              url: "http://localhost:8080/brand-case/brand/deleteByIds",
+              data: _this.selectedIds,
+            }).then(function (resp) {
+              // 首先将选中的id清空
+              _this.selectedIds = [];
+              if (resp.data === "success") {
+                // 删除成功
+                // 重新查询数据
+                _this.selectAll();
+                // 弹出消息提示
+                _this.$message({
+                  message: "恭喜你，删除成功",
+                  type: "success",
+                });
+              }
+            });
+          },
         },
         data() {
           return {
@@ -232,6 +261,8 @@
               ordered: "",
               description: "",
             },
+            // 被选中的行的id数组
+            selectedIds: [],
             // 复选框选中数据集合
             multipleSelection: [],
             // 表格数据
