@@ -140,13 +140,13 @@
           this.selectAll();
 
           /* var _this = this;
-      
-                   axios({
-                       method:"get",
-                       url:"http://localhost:8080/brand-case/selectAllServlet"
-                   }).then(function (resp) {
-                       _this.tableData = resp.data;
-                   })*/
+        
+                     axios({
+                         method:"get",
+                         url:"http://localhost:8080/brand-case/selectAllServlet"
+                     }).then(function (resp) {
+                         _this.tableData = resp.data;
+                     })*/
         },
 
         methods: {
@@ -218,31 +218,47 @@
 
           // 批量删除
           deleteByIds() {
-            // 获取选中的id (在表单元素被选中时，会将数据存储到multipleSelection中)
-            for (let i = 0; i < this.multipleSelection.length; i++) {
-              this.selectedIds.push(this.multipleSelection[i].id); // 只需要id即可
-            }
-            console.log("被选中要删除的id是" + this.selectedIds);
-            // 发送ajax请求
-            var _this = this;
-            axios({
-              method: "post",
-              url: "http://localhost:8080/brand-case/brand/deleteByIds",
-              data: _this.selectedIds,
-            }).then(function (resp) {
-              // 首先将选中的id清空
-              _this.selectedIds = [];
-              if (resp.data === "success") {
-                // 删除成功
-                // 重新查询数据
-                _this.selectAll();
-                // 弹出消息提示
-                _this.$message({
-                  message: "恭喜你，删除成功",
-                  type: "success",
+            // 确认提示框
+            this.$confirm("此操作将永久删除该文件, 是否继续?", "提示", {
+              confirmButtonText: "确定",
+              cancelButtonText: "取消",
+              type: "warning",
+            })
+              .then(() => {
+                // 获取选中的id (在表单元素被选中时，会将数据存储到multipleSelection中)
+                for (let i = 0; i < this.multipleSelection.length; i++) {
+                  this.selectedIds.push(this.multipleSelection[i].id); // 只需要id即可
+                }
+                console.log("被选中要删除的id是" + this.selectedIds);
+                // 发送ajax请求
+                var _this = this;
+                axios({
+                  method: "post",
+                  url: "http://localhost:8080/brand-case/brand/deleteByIds",
+                  data: _this.selectedIds,
+                }).then(function (resp) {
+                  // 首先将选中的id清空
+                  _this.selectedIds = [];
+                  if (resp.data === "success") {
+                    // 删除成功
+                    // 重新查询数据
+                    _this.selectAll();
+                    // 弹出消息提示
+                    _this.$message({
+                      message: "恭喜你，删除成功",
+                      type: "success",
+                    });
+                  }
                 });
-              }
-            });
+              })
+              .catch(() => {
+                // 将选中的id清空
+                this.selectedIds = [];
+                this.$message({
+                  type: "info",
+                  message: "已取消删除",
+                });
+              });
           },
         },
         data() {
