@@ -2,6 +2,7 @@ package com.itheima.service.impl;
 
 import com.itheima.mapper.BrandMapper;
 import com.itheima.pojo.Brand;
+import com.itheima.pojo.PageBean;
 import com.itheima.service.BrandService;
 import com.itheima.util.SqlSessionFactoryUtils;
 import org.apache.ibatis.session.SqlSession;
@@ -58,5 +59,25 @@ public class BrandServiceImpl implements BrandService {
 
         //5. 释放资源
         sqlSession.close();
+    }
+
+    @Override
+    public PageBean<Brand> selectByPage(int currentPage, int pageSize) {
+        //2. 获取SqlSession对象
+        SqlSession sqlSession = factory.openSession();
+        //3. 获取BrandMapper
+        BrandMapper mapper = sqlSession.getMapper(BrandMapper.class);
+
+        int start = (currentPage - 1) * pageSize;
+        List<Brand> rows = mapper.selectByPage(start, pageSize);
+
+        // 封装结果
+        PageBean<Brand> brandPageBean = new PageBean<>();
+        brandPageBean.setRows(rows);
+        brandPageBean.setTotalCount(mapper.selectTotalCount());
+
+        sqlSession.close();
+        return brandPageBean;
+
     }
 }
