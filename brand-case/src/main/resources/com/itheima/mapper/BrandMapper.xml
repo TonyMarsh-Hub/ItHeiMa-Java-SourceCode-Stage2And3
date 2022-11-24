@@ -16,4 +16,34 @@
         </foreach>
         ;
     </delete>
+    <select id="selectByPageAndCondition" resultMap="brandResultMap">
+        select * from tb_brand
+        <where>
+            <if test="brand.brandName != null and brand.brandName != ''">
+                and brand_name like concat('%',#{brand.brandName},'%')
+            </if>
+            <if test="brand.companyName != null and brand.companyName != ''">
+                and company_name like concat('%',#{brand.companyName},'%')
+            </if>
+            <if test="brand.status != null">
+                and status = #{brand.status}
+            </if>
+        </where>
+        limit #{start},#{rows}
+    </select>
+    <select id="selectTotalCountByCondition" resultType="java.lang.Integer">
+        # 因为传递的是单参数，所以不需要加@Param注解，同时标签内部直接使用#{属性}即可
+        select count(*) from tb_brand
+        <where>
+            <if test="brandName != null and brandName != ''">
+                and brand_name like concat('%',#{brandName},'%')
+            </if>
+            <if test="companyName != null and companyName != ''">
+                and company_name like concat('%',#{companyName},'%')
+            </if>
+            <if test="status != null">
+                and status = #{status}
+            </if>
+        </where>
+    </select>
 </mapper>

@@ -53,4 +53,22 @@ public interface BrandMapper {
     @Select("select count(*) from tb_brand")
     int selectTotalCount();
 
+    /**
+     * 条件查询 并对结果进行分页
+     *
+     * @param start 开始位置
+     * @param rows  每页显示的条数
+     * @param brand 查询条件
+     * @return
+     */
+    List<Brand> selectByPageAndCondition(@Param("start") int start, @Param("rows") int rows, @Param("brand") Brand brand);
+
+    /**
+     * 根据条件查询总条数
+     *
+     * @param brand 查询条件
+     * @return
+     */
+    int selectTotalCountByCondition(Brand brand);
+
 }
