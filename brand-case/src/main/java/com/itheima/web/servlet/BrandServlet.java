@@ -85,4 +85,28 @@ public class BrandServlet extends BaseServlet {
         response.setContentType("text/json;charset=utf-8");
         response.getWriter().write(jsonString);
     }
+
+    public void selectByPageAndCondition(HttpServletRequest request, HttpServletResponse response) throws IOException {
+        //1. 接收参数
+        // 分页参数在url中
+        String currentPageStr = request.getParameter("currentPage");
+        String pageSizeStr = request.getParameter("pageSize");
+        // 查询条件在请求体中
+        BufferedReader br = request.getReader();
+        String params = br.readLine();//json字符串
+        // 类型转换
+        int currentPage = Integer.parseInt(currentPageStr);
+        int pageSize = Integer.parseInt(pageSizeStr);
+        Brand brand = JSON.parseObject(params, Brand.class);
+        // Service
+        PageBean<Brand> brandPageBean = brandService.selectByPageAndCondition(currentPage, pageSize, brand);
+
+        //2. 结果转为JSON
+        String jsonString = JSON.toJSONString(brandPageBean);
+
+        //3. 写数据
+        response.setContentType("text/json;charset=utf-8");
+        response.getWriter().write(jsonString);
+    }
+
 }
