@@ -99,7 +99,7 @@
           </el-table-column>
           <el-table-column prop="ordered" align="center" label="排序">
           </el-table-column>
-          <el-table-column prop="status" align="center" label="当前状态">
+          <el-table-column align="center" label="当前状态" prop="statusStr">
           </el-table-column>
 
           <el-table-column align="center" label="操作">
@@ -150,10 +150,9 @@
                 "&pageSize=" +
                 this.pageSize,
               data: this.brand,
-            }).then(function (resp) {
-              // resp.data = {rows:[{},{},{}], totalCount100}
-              _this.tableData = resp.data.rows;
-              _this.totalCount = resp.data.totalCount;
+            }).then((resp) => {
+              this.tableData = resp.data.rows;
+              this.totalCount = resp.data.totalCount;
             });
           },
 
