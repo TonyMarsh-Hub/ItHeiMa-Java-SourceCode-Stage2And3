@@ -80,4 +80,26 @@ public class BrandServiceImpl implements BrandService {
         return brandPageBean;
 
     }
+
+    @Override
+    public PageBean<Brand> selectByPageAndCondition(int currentPage, int pageSize, Brand brand) {
+        //2. 获取SqlSession对象
+        SqlSession sqlSession = factory.openSession();
+        //3. 获取BrandMapper
+        BrandMapper mapper = sqlSession.getMapper(BrandMapper.class);
+
+        //计算开始索引
+        int start = (currentPage - 1) * pageSize;
+
+        // Brand模糊查询需要添加的 % % 通配符在Dao层实现了。这里不做处理
+        List<Brand> brands = mapper.selectByPageAndCondition(start, pageSize, brand);// 带分页的条件查询
+        int totalCount = mapper.selectTotalCountByCondition(brand);// 带条件的总记录数
+        // 封装结果
+        PageBean<Brand> brandPageBean = new PageBean<>();
+        brandPageBean.setRows(brands);
+        brandPageBean.setTotalCount(totalCount);
+
+        sqlSession.close();
+        return brandPageBean;
+    }
 }
